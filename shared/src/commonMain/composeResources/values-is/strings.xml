@@ -2,7 +2,7 @@
 <resources>
     <string name="app_description">Frjáls og léttur streymisspilari fyrir Android.</string>
     <string name="navigate_back">Til baka</string>
-    <string name="title_activity_about">Um NewPipe</string>
+    <string name="title_activity_about">Um YmnTube</string>
     <string name="tab_about">Um okkur &amp; algengar spurningar</string>
     <string name="website_title">Vefsíða</string>
     <string name="privacy_policy_encouragement">NewPipe verkefnið tekur friðhelgi þína mjög alvarlega. Þess vegna safnar forritið engu án samþykkis þíns. \n\nPersónuverndarstefna NewPipe útskýrir í smáatriðum hvaða gögn eru send og geymd þegar þú sendir hrunskýrslu.</string>

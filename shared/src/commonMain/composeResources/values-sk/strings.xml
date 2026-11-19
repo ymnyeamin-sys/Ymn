@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="title_activity_about">O aplikácii NewPipe</string>
+    <string name="title_activity_about">O aplikácii YmnTube</string>
     <string name="title_licenses">Licencie tretích strán</string>
     <string name="license">Od %1$s pod licenciou %2$s</string>
     <string name="tab_about">O nás a často kladené otázky</string>

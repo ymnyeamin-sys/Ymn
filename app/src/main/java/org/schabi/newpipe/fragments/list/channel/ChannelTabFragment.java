@@ -49,7 +49,7 @@ public class ChannelTabFragment extends BaseListInfoFragment<InfoItem, ChannelTa
 
     /**
      * Replacement for {@code tabHandler} without the raw data it may contain.
-     * Created on a background thread as {@code BandcampChannelLinkHandlerFactory}
+     * Created on a background thread for channel tab extraction.
      * performs network requests, which must not be performed on the main thread.
      */
     @Nullable

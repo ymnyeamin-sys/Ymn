@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="navigate_back">Geri</string>
-    <string name="title_activity_about">NewPipe Haqqında</string>
+    <string name="title_activity_about">YmnTube Haqqında</string>
     <string name="title_licenses">Üçüncü tərəf Lisenziyaları</string>
     <string name="license">%1$s tərəfindən %2$s altında</string>
     <string name="tab_about">Haqqında &amp; FAQ</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="title_activity_about">Sobre NewPipe</string>
+    <string name="title_activity_about">Sobre YmnTube</string>
     <string name="title_licenses">Licenzas de terceiras partes</string>
     <string name="license">Por %1$s baixo%2$s</string>
     <string name="tab_about">Acerca de e preguntas frecuentes</string>

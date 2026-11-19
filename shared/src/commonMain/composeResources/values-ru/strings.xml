@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="title_activity_about">О NewPipe</string>
+    <string name="title_activity_about">О YmnTube</string>
     <string name="title_licenses">Лицензии сторонних компонентов</string>
     <string name="license">Автор: %1$s, лицензия: %2$s</string>
     <string name="tab_about">О приложении и ответы на вопросы</string>

@@ -8,7 +8,7 @@
     <string name="navigate_back">Back</string>
 
     <!-- AboutScreen -->
-    <string name="title_activity_about">About NewPipe</string>
+    <string name="title_activity_about">About YmnTube</string>
     <string name="title_licenses">Third-party Licenses</string>
     <string name="license">By %1$s under %2$s</string>
     <string name="tab_about">About \u0026 FAQ</string>
@@ -258,8 +258,6 @@
     <string name="main_page_content_summary">What tabs are shown on the main page</string>
     <string name="show_channel_tabs">Channel tabs</string>
     <string name="show_channel_tabs_summary">What tabs are shown on the channel pages</string>
-    <string name="peertube_instance_url_title">PeerTube instances</string>
-    <string name="peertube_instance_url_summary">Select your favorite PeerTube instances</string>
     <string name="show_age_restricted_content_title">Show age restricted content</string>
     <string name="show_age_restricted_content_summary">Show content possibly unsuitable for children because it has an age limit (like 18+)</string>
     <string name="youtube_restricted_mode_enabled_title">Turn on YouTube's "Restricted Mode"</string>

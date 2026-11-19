@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="navigate_back">חזרה</string>
-    <string name="title_activity_about">על NewPipe</string>
+    <string name="title_activity_about">על YmnTube</string>
     <string name="title_licenses">רישיונות צד־שלישי</string>
     <string name="license">על ידי %1$s בכפוף לרישיון %2$s</string>
     <string name="tab_about">על אודות ושו״ת</string>

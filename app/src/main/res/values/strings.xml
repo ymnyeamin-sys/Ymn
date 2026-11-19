@@ -20,6 +20,7 @@
     <string name="search_with_service_name">Search %1$s</string>
     <string name="search_with_service_name_and_filter">Search %1$s (%2$s)</string>
     <string name="settings">Settings</string>
+    <string name="main_navigation_home">Home</string>
     <string name="did_you_mean">Did you mean \"%1$s\"?</string>
     <string name="search_showing_result_for">Showing results for: %s</string>
     <string name="share_dialog_title">Share with</string>
@@ -141,14 +142,6 @@
     <string name="unsupported_url_dialog_message">Could not recognize the URL. Open with another app?</string>
     <string name="default_content_country_title">Default content country</string>
     <string name="content_language_title">Default content language</string>
-    <string name="peertube_instance_url_title">PeerTube instances</string>
-    <string name="peertube_instance_url_summary">Select your favorite PeerTube instances</string>
-    <string name="peertube_instance_url_help">Find the instances you like on %s</string>
-    <string name="peertube_instance_add_title">Add instance</string>
-    <string name="peertube_instance_add_help">Enter instance URL</string>
-    <string name="peertube_instance_add_fail">Could not validate instance</string>
-    <string name="peertube_instance_add_https_only">Only HTTPS URLs are supported</string>
-    <string name="peertube_instance_add_exists">Instance already exists</string>
     <string name="settings_category_player_title">Player</string>
     <string name="settings_category_player_behavior_title">Behavior</string>
     <string name="settings_category_video_audio_title">Video and audio</string>
@@ -421,6 +414,7 @@
     <string name="no_feed_group_created_yet">No feed group created yet</string>
     <!-- Kiosk Names -->
     <string name="trending">Trending</string>
+    <string name="tab_for_you">For you</string>
     <string name="top_50">Top 50</string>
     <string name="new_and_hot">New and hot</string>
     <string name="local">Local</string>
@@ -536,8 +530,6 @@
 \n5. Click on the \"Download\" button after it appears
 \n6. Click on IMPORT FILE below and select the downloaded .zip file
 \n7. [If the .zip import fails] Extract the .csv file (usually under \"YouTube and YouTube Music/subscriptions/subscriptions.csv\"), click on IMPORT FILE below and select the extracted csv file</string>
-    <string name="import_soundcloud_instructions">Import a SoundCloud profile by typing either the URL or your ID:\n\n1. Enable \"desktop mode\" in a web-browser (the site is not available for mobile devices)\n2. Go to this URL: %1$s\n3. Log in when asked\n4. Copy the profile URL you were redirected to.</string>
-    <string name="import_soundcloud_instructions_hint">yourID, soundcloud.com/yourid</string>
     <string name="import_network_expensive_warning">Keep in mind this operation can be network expensive.\n\nDo you want to continue?</string>
     <!-- Playback Parameters -->
     <string name="playback_speed_control">Playback Speed Controls</string>
@@ -768,7 +760,6 @@
     <string name="no_appropriate_file_manager_message_android_10">No appropriate file manager was found for this action.
 \nPlease install a Storage Access Framework compatible file manager</string>
     <string name="georestricted_content">This content is not available in your country.</string>
-    <string name="soundcloud_go_plus_content">This is a SoundCloud Go+ track, at least in your country, so it cannot be streamed or downloaded by NewPipe.</string>
     <string name="private_content">This content is private, so it cannot be streamed or downloaded by NewPipe.</string>
     <string name="youtube_music_premium_content">This video is available only to YouTube Music Premium members, so it cannot be streamed or downloaded by NewPipe.</string>
     <string name="account_terminated">Account terminated</string>

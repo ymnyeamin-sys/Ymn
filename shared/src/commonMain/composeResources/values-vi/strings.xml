@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="navigate_back">Quay lại</string>
-    <string name="title_activity_about">Về NewPipe</string>
+    <string name="title_activity_about">Về YmnTube</string>
     <string name="title_licenses">Các giấy phép Bên thứ ba</string>
     <string name="tab_licenses">Giấy phép</string>
     <string name="contribution_title">Đóng góp</string>

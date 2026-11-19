@@ -50,22 +50,14 @@ class TimestampLongPressClickableSpan(
             timestampMatchDTO: TimestampMatchDTO
         ): String {
             // TODO: use extractor methods to get timestamps when this feature will be implemented in it
-            when (relatedInfoService) {
-                ServiceList.YouTube ->
-                    return relatedStreamUrl + "&t=" + timestampMatchDTO.seconds()
-
-                ServiceList.SoundCloud, ServiceList.MediaCCC ->
-                    return relatedStreamUrl + "#t=" + timestampMatchDTO.seconds()
-
-                ServiceList.PeerTube ->
-                    return relatedStreamUrl + "?start=" + timestampMatchDTO.seconds()
+            return if (relatedInfoService == ServiceList.YouTube) {
+                relatedStreamUrl + "&t=" + timestampMatchDTO.seconds()
+            } else {
+                descriptionText.substring(
+                    timestampMatchDTO.timestampStart(),
+                    timestampMatchDTO.timestampEnd()
+                )
             }
-
-            // Return timestamp text for other services
-            return descriptionText.substring(
-                timestampMatchDTO.timestampStart(),
-                timestampMatchDTO.timestampEnd()
-            )
         }
     }
 }

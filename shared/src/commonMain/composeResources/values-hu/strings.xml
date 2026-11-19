@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="navigate_back">Vissza</string>
-    <string name="title_activity_about">A NewPipe névjegye</string>
+    <string name="title_activity_about">A YmnTube névjegye</string>
     <string name="title_licenses">Harmadik féltől származó licencek</string>
     <string name="license">Szerző: %1$s · Licenc: %2$s</string>
     <string name="tab_about">Névjegy és GYIK</string>

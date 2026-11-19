@@ -9,6 +9,8 @@ import com.grack.nanojson.JsonParserException;
 import com.grack.nanojson.JsonStringWriter;
 import com.grack.nanojson.JsonWriter;
 
+import org.schabi.newpipe.util.ServiceHelper;
+
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -58,6 +60,7 @@ public final class TabsJsonHelper {
             final var returnTabs = tabsArray.streamAsJsonObjects()
                     .map(Tab::from)
                     .filter(Objects::nonNull)
+                    .filter(TabsJsonHelper::isSupportedTab)
                     .collect(Collectors.toUnmodifiableList());
 
             return returnTabs.isEmpty() ? getDefaultTabs() : returnTabs;
@@ -90,6 +93,18 @@ public final class TabsJsonHelper {
 
     public static List<Tab> getDefaultTabs() {
         return FALLBACK_INITIAL_TABS_LIST;
+    }
+
+    private static boolean isSupportedTab(final Tab tab) {
+        if (tab instanceof Tab.KioskTab kioskTab) {
+            return ServiceHelper.isSupportedServiceId(kioskTab.getKioskServiceId());
+        } else if (tab instanceof Tab.ChannelTab channelTab) {
+            return ServiceHelper.isSupportedServiceId(channelTab.getChannelServiceId());
+        } else if (tab instanceof Tab.PlaylistTab playlistTab) {
+            final int serviceId = playlistTab.getPlaylistServiceId();
+            return serviceId == -1 || ServiceHelper.isSupportedServiceId(serviceId);
+        }
+        return true;
     }
 
     public static final class InvalidJsonException extends Exception {

@@ -91,8 +91,8 @@ public class TabsJsonHelperTest {
         final Tab.DefaultKioskTab defaultKioskTab = new Tab.DefaultKioskTab();
         final Tab.SubscriptionsTab subscriptionsTab = new Tab.SubscriptionsTab();
         final Tab.ChannelTab channelTab = new Tab.ChannelTab(
-                666, "https://example.org", "testName");
-        final Tab.KioskTab kioskTab = new Tab.KioskTab(123, "trending_key");
+                0, "https://example.org", "testName");
+        final Tab.KioskTab kioskTab = new Tab.KioskTab(0, "trending_key");
         final Tab.FeedGroupTab feedGroupTab = new Tab.FeedGroupTab(
                 1L, "x", 123);
 
@@ -140,5 +140,19 @@ public class TabsJsonHelperTest {
         assertEquals(feedGroupTab.getFeedGroupId(), grpTabFromReturnedJson.getFeedGroupId());
         assertEquals(feedGroupTab.getIconId(), grpTabFromReturnedJson.getIconId());
         assertEquals(feedGroupTab.getFeedGroupName(), grpTabFromReturnedJson.getFeedGroupName());
+    }
+
+    @Test
+    public void testNonYouTubeTabsAreIgnored() throws TabsJsonHelper.InvalidJsonException {
+        final String tabsJson = TabsJsonHelper.getJsonToSave(Arrays.asList(
+                new Tab.KioskTab(1, "unsupported"),
+                new Tab.ChannelTab(1, "https://example.org", "unsupported"),
+                new Tab.PlaylistTab(1, "https://example.org/playlist", "unsupported"),
+                new Tab.BlankTab()));
+
+        final List<Tab> tabs = TabsJsonHelper.getTabsFromJson(tabsJson);
+
+        assertEquals(1, tabs.size());
+        assertEquals(Tab.BlankTab.ID, tabs.get(0).getTabId());
     }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="navigate_back">Terug</string>
-    <string name="title_activity_about">Over NewPipe</string>
+    <string name="title_activity_about">Over YmnTube</string>
     <string name="title_licenses">Licenties van derden</string>
     <string name="license">Door %1$s onder %2$s</string>
     <string name="tab_about">Over &amp; veel­gestelde vragen</string>

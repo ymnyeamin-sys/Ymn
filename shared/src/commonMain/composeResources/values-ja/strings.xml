@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="navigate_back">戻る</string>
-    <string name="title_activity_about">NewPipeについて</string>
+    <string name="title_activity_about">YmnTubeについて</string>
     <string name="title_licenses">サードパーティライセンス</string>
     <string name="license">%1$s作、%2$sライセンス</string>
     <string name="tab_about">概要とよくある質問</string>

@@ -15,7 +15,7 @@
     <string name="settings_category_backup_restore_title">Servare et restituere</string>
     <string name="settings_category_debug_title">Errores reperire et amovere</string>
     <string name="navigate_back">Retro</string>
-    <string name="title_activity_about">De NewPipe</string>
+    <string name="title_activity_about">De YmnTube</string>
     <string name="title_licenses">Licentiae tertianae</string>
     <string name="license">A %1$s cum %2$s</string>
     <string name="tab_about">De &amp; FAQ</string>

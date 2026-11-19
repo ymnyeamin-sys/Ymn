@@ -24,7 +24,7 @@
     <string name="settings_category_history_title">Geskiedenis en kas</string>
     <string name="settings_category_updates_title">Opdateerings</string>
     <string name="settings_category_backup_restore_title">Rugsteun en herstel</string>
-    <string name="title_activity_about">NewPipe Besonderhede</string>
+    <string name="title_activity_about">YmnTube Besonderhede</string>
     <string name="title_licenses">Derdeparty Lisensies</string>
     <string name="license">Deur %1$s onder %2$s</string>
     <string name="tab_about">Besonderhede &amp; Gereelde Vrae</string>

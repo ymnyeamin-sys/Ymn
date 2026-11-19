@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="navigate_back">رجوع</string>
-    <string name="title_activity_about">حول NewPipe</string>
+    <string name="title_activity_about">حول YmnTube</string>
     <string name="title_licenses">تراخيص الطرف الثالث</string>
     <string name="license">بواسطة %1$s تحت %2$s</string>
     <string name="tab_about">حول و الأسئلة الشائعة</string>

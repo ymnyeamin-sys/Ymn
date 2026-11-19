@@ -2,7 +2,7 @@
 <resources>
     <string name="app_description">Viegls un brīvs, pieejams bezmaksas, straumēšanas atskaņotājs Android ierīcēm.</string>
     <string name="navigate_back">Atpakaļ</string>
-    <string name="title_activity_about">Par NewPipe</string>
+    <string name="title_activity_about">Par YmnTube</string>
     <string name="tab_about">Par un BUJ</string>
     <string name="tab_licenses">Licences</string>
     <string name="contribution_title">Dot savu artavu</string>

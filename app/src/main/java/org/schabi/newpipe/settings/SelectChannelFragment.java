@@ -24,6 +24,7 @@ import org.schabi.newpipe.R;
 import org.schabi.newpipe.database.subscription.SubscriptionEntity;
 import org.schabi.newpipe.error.ErrorUtil;
 import org.schabi.newpipe.local.subscription.SubscriptionManager;
+import org.schabi.newpipe.util.ServiceHelper;
 import org.schabi.newpipe.util.ThemeHelper;
 import org.schabi.newpipe.util.image.CoilHelper;
 
@@ -115,9 +116,12 @@ public class SelectChannelFragment extends DialogFragment {
     //////////////////////////////////////////////////////////////////////////*/
 
     private void displayChannels(final List<SubscriptionEntity> newSubscriptions) {
-        this.subscriptions = newSubscriptions;
+        this.subscriptions = newSubscriptions.stream()
+                .filter(subscription -> ServiceHelper.isSupportedServiceId(
+                        subscription.getServiceId()))
+                .toList();
         progressBar.setVisibility(View.GONE);
-        if (newSubscriptions.isEmpty()) {
+        if (subscriptions.isEmpty()) {
             emptyView.setVisibility(View.VISIBLE);
             return;
         }

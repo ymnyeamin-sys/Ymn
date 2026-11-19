@@ -87,8 +87,6 @@ import newpipe.shared.generated.resources.local_search_suggestions
 import newpipe.shared.generated.resources.main_page_content
 import newpipe.shared.generated.resources.main_page_content_summary
 import newpipe.shared.generated.resources.minutes
-import newpipe.shared.generated.resources.peertube_instance_url_summary
-import newpipe.shared.generated.resources.peertube_instance_url_title
 import newpipe.shared.generated.resources.remote_search_suggestions
 import newpipe.shared.generated.resources.seconds
 import newpipe.shared.generated.resources.settings_category_feed_title
@@ -337,11 +335,6 @@ fun ContentSettingsScreenContent(
                 entries = channelTabEntries,
                 selectedValues = channelTabs,
                 onValuesSelected = onChannelTabsChange
-            )
-            // TODO: open the PeerTube instances screen once it is migrated
-            PreferenceRow(
-                title = stringResource(Res.string.peertube_instance_url_title),
-                summary = stringResource(Res.string.peertube_instance_url_summary)
             )
             SwitchPreference(
                 title = stringResource(Res.string.show_age_restricted_content_title),

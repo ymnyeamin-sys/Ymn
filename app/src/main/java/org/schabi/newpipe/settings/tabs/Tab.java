@@ -12,24 +12,20 @@ import com.grack.nanojson.JsonStringWriter;
 
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.database.LocalItem.LocalItemType;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.error.UserAction;
 import org.schabi.newpipe.extractor.NewPipe;
 import org.schabi.newpipe.extractor.StreamingService;
 import org.schabi.newpipe.extractor.exceptions.ExtractionException;
 import org.schabi.newpipe.fragments.BlankFragment;
 import org.schabi.newpipe.fragments.list.channel.ChannelFragment;
-import org.schabi.newpipe.fragments.list.kiosk.DefaultKioskFragment;
 import org.schabi.newpipe.fragments.list.kiosk.KioskFragment;
 import org.schabi.newpipe.fragments.list.playlist.PlaylistFragment;
+import org.schabi.newpipe.fragments.list.recommendations.RecommendedVideosFragment;
 import org.schabi.newpipe.local.bookmark.BookmarkFragment;
 import org.schabi.newpipe.local.feed.FeedFragment;
 import org.schabi.newpipe.local.history.StatisticsPlaylistFragment;
 import org.schabi.newpipe.local.playlist.LocalPlaylistFragment;
 import org.schabi.newpipe.local.subscription.SubscriptionFragment;
 import org.schabi.newpipe.util.KioskTranslator;
-import org.schabi.newpipe.util.ServiceHelper;
 
 import java.util.Objects;
 
@@ -493,32 +489,18 @@ public abstract class Tab {
 
         @Override
         public String getTabName(final Context context) {
-            return KioskTranslator.getTranslatedKioskName(getDefaultKioskId(context), context);
+            return context.getString(R.string.tab_for_you);
         }
 
         @DrawableRes
         @Override
         public int getTabIconRes(final Context context) {
-            return KioskTranslator.getKioskIcon(getDefaultKioskId(context));
+            return R.drawable.ic_explore;
         }
 
         @Override
-        public DefaultKioskFragment getFragment(final Context context) {
-            return new DefaultKioskFragment();
-        }
-
-        private String getDefaultKioskId(final Context context) {
-            final int kioskServiceId = ServiceHelper.getSelectedServiceId(context);
-
-            String kioskId = "";
-            try {
-                final StreamingService service = NewPipe.getService(kioskServiceId);
-                kioskId = service.getKioskList().getDefaultKioskId();
-            } catch (final ExtractionException e) {
-                ErrorUtil.showSnackbar(context, new ErrorInfo(e,
-                        UserAction.REQUESTED_KIOSK, "Loading default kiosk for selected service"));
-            }
-            return kioskId;
+        public RecommendedVideosFragment getFragment(final Context context) {
+            return new RecommendedVideosFragment();
         }
     }
 

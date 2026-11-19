@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="navigate_back">Tilbake</string>
-    <string name="title_activity_about">Om NewPipe</string>
+    <string name="title_activity_about">Om YmnTube</string>
     <string name="title_licenses">Tredjepartslisenser</string>
     <string name="license">Av %1$s under %2$s</string>
     <string name="tab_about">Om og ofte stilte spørsmål</string>

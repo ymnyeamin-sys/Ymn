@@ -16,6 +16,7 @@ import org.schabi.newpipe.local.subscription.item.ChannelItem
 import org.schabi.newpipe.local.subscription.item.FeedGroupCardGridItem
 import org.schabi.newpipe.local.subscription.item.FeedGroupCardItem
 import org.schabi.newpipe.util.DEFAULT_THROTTLE_TIMEOUT
+import org.schabi.newpipe.util.ServiceHelper
 import org.schabi.newpipe.util.ThemeHelper.getItemViewMode
 
 class SubscriptionViewModel(application: Application) : AndroidViewModel(application) {
@@ -54,7 +55,13 @@ class SubscriptionViewModel(application: Application) : AndroidViewModel(applica
 
     private var stateItemsDisposable = subscriptionManager.subscriptions()
         .throttleLatest(DEFAULT_THROTTLE_TIMEOUT, TimeUnit.MILLISECONDS)
-        .map { it.map { entity -> ChannelItem(entity.toChannelInfoItem(), entity.uid, ChannelItem.ItemVersion.MINI) } }
+        .map { subscriptions ->
+            subscriptions
+                .filter { ServiceHelper.isSupportedServiceId(it.serviceId) }
+                .map { entity ->
+                    ChannelItem(entity.toChannelInfoItem(), entity.uid, ChannelItem.ItemVersion.MINI)
+                }
+        }
         .subscribeOn(Schedulers.io())
         .subscribe(
             { mutableStateLiveData.postValue(SubscriptionState.LoadedState(it)) },

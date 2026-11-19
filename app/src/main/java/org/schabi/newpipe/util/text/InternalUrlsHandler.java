@@ -12,6 +12,7 @@ import org.schabi.newpipe.extractor.exceptions.ParsingException;
 import org.schabi.newpipe.extractor.linkhandler.LinkHandlerFactory;
 import org.schabi.newpipe.player.TimestampChangeData;
 import org.schabi.newpipe.util.NavigationHelper;
+import org.schabi.newpipe.util.ServiceHelper;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -60,6 +61,10 @@ public final class InternalUrlsHandler {
             return false;
         }
 
+        if (!ServiceHelper.isSupportedServiceId(service.getServiceId())) {
+            return false;
+        }
+
         if (linkType == StreamingService.LinkType.STREAM && seconds != -1) {
             return playOnPopup(context, matchedUrl, service, seconds);
         } else {
@@ -81,6 +86,10 @@ public final class InternalUrlsHandler {
                                       final String url,
                                       @NonNull final StreamingService service,
                                       final int seconds) {
+        if (!ServiceHelper.isSupportedServiceId(service.getServiceId())) {
+            return false;
+        }
+
         final LinkHandlerFactory factory = service.getStreamLHFactory();
         final String cleanUrl;
 

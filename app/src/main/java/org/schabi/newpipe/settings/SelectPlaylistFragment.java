@@ -28,6 +28,7 @@ import org.schabi.newpipe.error.UserAction;
 import org.schabi.newpipe.local.playlist.LocalPlaylistManager;
 import org.schabi.newpipe.local.playlist.RemotePlaylistManager;
 import org.schabi.newpipe.util.image.CoilHelper;
+import org.schabi.newpipe.util.ServiceHelper;
 
 import java.util.List;
 import java.util.Vector;
@@ -97,10 +98,13 @@ public class SelectPlaylistFragment extends DialogFragment {
     }
 
     private void displayPlaylists(final List<PlaylistLocalItem> newPlaylists) {
-        playlists = newPlaylists;
+        playlists = newPlaylists.stream()
+                .filter(item -> !(item instanceof PlaylistRemoteEntity remotePlaylist)
+                        || ServiceHelper.isSupportedServiceId(remotePlaylist.getServiceId()))
+                .toList();
         progressBar.setVisibility(View.GONE);
-        emptyView.setVisibility(newPlaylists.isEmpty() ? View.VISIBLE : View.GONE);
-        recyclerView.setVisibility(newPlaylists.isEmpty() ? View.GONE : View.VISIBLE);
+        emptyView.setVisibility(playlists.isEmpty() ? View.VISIBLE : View.GONE);
+        recyclerView.setVisibility(playlists.isEmpty() ? View.GONE : View.VISIBLE);
     }
 
     protected void onError(final Throwable e) {

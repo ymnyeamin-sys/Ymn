@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="navigate_back">Назад</string>
-    <string name="title_activity_about">Про NewPipe</string>
+    <string name="title_activity_about">Про YmnTube</string>
     <string name="title_licenses">Ліцензії третіх сторін</string>
     <string name="tab_about">Про нас і ЧаПи</string>
     <string name="tab_licenses">Ліцензії</string>

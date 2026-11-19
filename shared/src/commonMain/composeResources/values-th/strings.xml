@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="navigate_back">กลับ</string>
-    <string name="title_activity_about">เกี่ยวกับ NewPipe</string>
+    <string name="title_activity_about">เกี่ยวกับ YmnTube</string>
     <string name="title_licenses">ใบอนุญาตบุคคลที่สาม</string>
     <string name="license">โดย %1$s ภายใต้ %2$s</string>
     <string name="tab_about">เกี่ยวกับเรา &amp; คำถามที่พบบ่อย</string>

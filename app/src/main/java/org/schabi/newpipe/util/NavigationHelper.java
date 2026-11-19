@@ -693,12 +693,14 @@ public final class NavigationHelper {
         context.startActivity(intent);
     }
 
-    public static void openDownloads(final Activity activity) {
+    public static boolean openDownloads(final Activity activity) {
         if (PermissionHelper.checkStoragePermissions(
                 activity, PermissionHelper.DOWNLOADS_REQUEST_CODE)) {
             final Intent intent = new Intent(activity, DownloadActivity.class);
             activity.startActivity(intent);
+            return true;
         }
+        return false;
     }
 
     public static Intent getPlayQueueActivityIntent(final Context context) {
@@ -735,6 +737,9 @@ public final class NavigationHelper {
     public static Intent getIntentByLink(final Context context,
                                          final StreamingService service,
                                          final String url) throws ExtractionException {
+        if (!ServiceHelper.isSupportedServiceId(service.getServiceId())) {
+            throw new ExtractionException("Only YouTube URLs are supported");
+        }
         final StreamingService.LinkType linkType = service.getLinkTypeByUrl(url);
 
         if (linkType == StreamingService.LinkType.NONE) {
