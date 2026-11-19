@@ -235,7 +235,9 @@ public class RouterActivity extends AppCompatActivity {
                         }
 
                         // return whether the url was found to be supported or not
-                        return currentLinkType != LinkType.NONE;
+                        return org.schabi.newpipe.util.ServiceHelper
+                                .isSupportedServiceId(currentService.getServiceId())
+                                && currentLinkType != LinkType.NONE;
                     } catch (final ExtractionException e) {
                         // this can be reached only when the url is completely unsupported
                         return false;

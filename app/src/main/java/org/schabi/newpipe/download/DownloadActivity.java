@@ -14,6 +14,9 @@ import androidx.fragment.app.FragmentTransaction;
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.databinding.ActivityDownloaderBinding;
 import org.schabi.newpipe.util.DeviceUtils;
+import org.schabi.newpipe.util.MainNavigationHelper;
+import org.schabi.newpipe.util.NavigationHelper;
+import org.schabi.newpipe.util.ServiceHelper;
 import org.schabi.newpipe.util.ThemeHelper;
 import org.schabi.newpipe.views.FocusOverlayView;
 
@@ -38,6 +41,8 @@ public class DownloadActivity extends AppCompatActivity {
         final ActivityDownloaderBinding downloaderBinding =
                 ActivityDownloaderBinding.inflate(getLayoutInflater());
         setContentView(downloaderBinding.getRoot());
+        MainNavigationHelper.setup(downloaderBinding.mainBottomNavigation, this,
+                R.id.main_navigation_downloads);
 
         setSupportActionBar(downloaderBinding.toolbarLayout.toolbar);
 
@@ -45,7 +50,7 @@ public class DownloadActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setTitle(R.string.downloads_title);
-            actionBar.setDisplayShowTitleEnabled(true);
+            actionBar.setDisplayShowTitleEnabled(false);
         }
 
         getWindow().getDecorView().getViewTreeObserver()
@@ -86,6 +91,9 @@ public class DownloadActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
+                return true;
+            case R.id.action_search:
+                NavigationHelper.openSearch(this, ServiceHelper.getSelectedServiceId(this), "");
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

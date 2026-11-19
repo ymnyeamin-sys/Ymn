@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="navigate_back">뒤로</string>
-    <string name="title_activity_about">NewPipe 정보</string>
+    <string name="title_activity_about">YmnTube 정보</string>
     <string name="title_licenses">서드파티 라이선스</string>
     <string name="tab_about">정보 및 FAQ</string>
     <string name="tab_licenses">라이선스</string>

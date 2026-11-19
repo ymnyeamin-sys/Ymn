@@ -65,7 +65,6 @@ import org.schabi.newpipe.extractor.StreamingService;
 import org.schabi.newpipe.extractor.exceptions.ParsingException;
 import org.schabi.newpipe.extractor.search.SearchExtractor;
 import org.schabi.newpipe.extractor.search.SearchInfo;
-import org.schabi.newpipe.extractor.services.peertube.linkHandler.PeertubeSearchQueryHandlerFactory;
 import org.schabi.newpipe.extractor.services.youtube.linkHandler.YoutubeSearchQueryHandlerFactory;
 import org.schabi.newpipe.fragments.BackPressable;
 import org.schabi.newpipe.fragments.list.BaseListFragment;
@@ -468,15 +467,6 @@ public class SearchFragment extends BaseListFragment<SearchInfo, ListExtractor.I
                         itemId++,
                         1,
                         getStyledHeader("YouTube Music"));
-            } else if (filter.equals(PeertubeSearchQueryHandlerFactory.SEPIA_VIDEOS)) {
-                menu.add(2,
-                        itemId++,
-                        0,
-                        getStyledHeader("Search"));
-                menu.add(2,
-                        itemId++,
-                        1,
-                        getStyledHeader("Sepia Search"));
             }
             menuItemToFilterName.put(itemId, filter);
             final MenuItem item = menu.add(1,
@@ -862,6 +852,10 @@ public class SearchFragment extends BaseListFragment<SearchInfo, ListExtractor.I
         // and open it if possible.
         try {
             final StreamingService streamingService = NewPipe.getServiceByUrl(theSearchString);
+            if (!ServiceHelper.isSupportedServiceId(streamingService.getServiceId())) {
+                showTextError(getString(R.string.unsupported_url));
+                return;
+            }
             showLoading();
             disposables.add(Observable
                     .fromCallable(() -> NavigationHelper.getIntentByLink(activity,

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="navigate_back">Ka Noqo</string>
-    <string name="title_activity_about">Ku saabsan NewPipe</string>
+    <string name="title_activity_about">Ku saabsan YmnTube</string>
     <string name="tab_about">Ku Saabsan &amp; Su’aalaha Inta Badan La Isweydiiyo</string>
     <string name="contribution_title">Ka qayb qaado</string>
     <string name="contribution_encouragement">Hadday jiraan fikrado ku saabsan; turjumaadda, isbeddellada naqshadeynta, nadiifinta koodhka, ama isbeddellada koodhka culus ee dhabta ah - caawimaad ayaa had iyo jeer la soo dhaweynayaa. Inta badan ee la sameeyo ayaa ka sii fiican!</string>

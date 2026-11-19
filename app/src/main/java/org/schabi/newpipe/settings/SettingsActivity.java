@@ -36,6 +36,7 @@ import org.schabi.newpipe.settings.preferencesearch.PreferenceSearchResultHighli
 import org.schabi.newpipe.settings.preferencesearch.PreferenceSearchResultListener;
 import org.schabi.newpipe.settings.preferencesearch.PreferenceSearcher;
 import org.schabi.newpipe.util.DeviceUtils;
+import org.schabi.newpipe.util.MainNavigationHelper;
 import org.schabi.newpipe.util.ReleaseVersionUtil;
 import org.schabi.newpipe.util.ThemeHelper;
 import org.schabi.newpipe.views.FocusOverlayView;
@@ -96,6 +97,8 @@ public class SettingsActivity extends AppCompatActivity implements
         final SettingsLayoutBinding settingsLayoutBinding =
                 SettingsLayoutBinding.inflate(getLayoutInflater());
         setContentView(settingsLayoutBinding.getRoot());
+        MainNavigationHelper.setup(settingsLayoutBinding.mainBottomNavigation, this,
+                R.id.main_navigation_settings);
         initSearch(settingsLayoutBinding, restored);
 
         setSupportActionBar(settingsLayoutBinding.settingsToolbarLayout.toolbar);
@@ -130,7 +133,7 @@ public class SettingsActivity extends AppCompatActivity implements
         final ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setDisplayShowTitleEnabled(true);
+            actionBar.setDisplayShowTitleEnabled(false);
         }
 
         return super.onCreateOptionsMenu(menu);

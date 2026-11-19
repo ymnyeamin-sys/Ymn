@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="navigate_back">Zpět</string>
-    <string name="title_activity_about">O aplikaci NewPipe</string>
+    <string name="title_activity_about">O aplikaci YmnTube</string>
     <string name="title_licenses">Licence třetích stran</string>
     <string name="license">Od %1$s pod licencí %2$s</string>
     <string name="tab_about">O aplikaci a dotazy</string>

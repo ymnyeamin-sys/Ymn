@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="navigate_back">Voltar</string>
-    <string name="title_activity_about">Sobre o NewPipe</string>
+    <string name="title_activity_about">Sobre o YmnTube</string>
     <string name="title_licenses">Licenças de terceiros</string>
     <string name="license">Por %1$s sob %2$s</string>
     <string name="tab_about">Sobre &amp; Perguntas Frequentes</string>

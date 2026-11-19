@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="navigate_back">Înapoi</string>
-    <string name="title_activity_about">Despre NewPipe</string>
+    <string name="title_activity_about">Despre YmnTube</string>
     <string name="title_licenses">Licențe terță-parte</string>
     <string name="license">De %1$s sub %2$s</string>
     <string name="tab_about">Despre &amp; Întrebări frecvente</string>

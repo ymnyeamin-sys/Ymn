@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="navigate_back">Indietro</string>
-    <string name="title_activity_about">Informazioni su NewPipe</string>
+    <string name="title_activity_about">Informazioni su YmnTube</string>
     <string name="title_licenses">Licenze di terze parti</string>
     <string name="license">Da %1$s sotto %2$s</string>
     <string name="tab_about">Informazioni e domande frequenti</string>
